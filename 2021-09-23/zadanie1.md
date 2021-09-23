@@ -1,4 +1,4 @@
-# Zadanie 1.2
+# Zadanie 1
 
 ```
 funkcja F(T,x) 
@@ -15,7 +15,9 @@ funkcja F(T,x)
     wynikiem jest fałsz
 ```
 
-## Dla `x = 7`
+## Zadanie 1.1
+
+### Dla `x = 7`
 
 ```
 T =  [3; 5; 7; 8; 9; 13; 33; 37; 40; 43]
@@ -34,7 +36,7 @@ Liczba modyfikacji:
 `p`: 1
 `k`: 1
 
-## Dla `x = 43`
+### Dla `x = 43`
 
 ```
 T =  [3; 5; 7; 8; 9; 13; 33; 37; 40; 43]
@@ -54,6 +56,24 @@ Liczba modyfikacji:
 `p`: 3
 `k`: 0
 
+## Zadanie 1.2
 
+```
+T = [10, 20, 30, 40, ... 990, 1000]
+n = 100
+x = 2021
+```
 
+|  p |   k |  s | T[s] | x  | T[s]=x | T[s]<x |
+|----|-----|----|------|----|--------|--------|
+|  1 | 100 |  50| 500  |2021| fałsz  | prawda |
+| 51 | 100 |  75| 750  |2021| fałsz  | prawda |
+| 76 | 100 |  88| 880  |2021| fałsz  | prawda |
+| 89 | 100 |  94| 940  |2021| fałsz  | prawda |
+| 95 | 100 |  97| 970  |2021| fałsz  | prawda |
+| 98 | 100 |  99| 990  |2021| fałsz  | prawda |
+|100 | 100 | 100|1000  |2021| fałsz  | prawda |
+|101 | 100 | ---|---|  |--- | ---    | ---    |
+
+Warunek był spełniony 7 razy.
 
