@@ -77,3 +77,26 @@ x = 2021
 
 Warunek był spełniony 7 razy.
 
+## Zadanie 1.3
+
+**Użycie algorytmu dla niepoprawnych danych: Nieuporządkowana tablica T**
+
+```
+T = [3;	5; 7; 8; 90; 13; 33; 37; 40; 43]
+n = 10
+x = 43
+```
+
+|  p |   k |  s | T[s] | x  | T[s]=x | T[s]<x |
+|----|-----|----|------|----|--------|--------|
+|  1 |  10 |  5 |  90  | 43 | fałsz  | fałsz  |
+|  1 |   4 |  2 |   5  | 43 | fałsz  | prawda |
+|  3 |   4 |  3 |   7  | 43 | fałsz  | prawda |
+|  4 |   4 |  4 |   8  | 43 | fałsz  | prawda |
+|  5 |   4 | ---| ---  | ---| ---    | ---    |
+
+Wynik: *fałsz*
+
+Jest to błędny wynik, gdyż wartość `43` znajdowała się w `T`. Algorytm nie był w stanie jej znaleźć, gdyż wartości nie były uporządkowane niemalejąco.
+
+
