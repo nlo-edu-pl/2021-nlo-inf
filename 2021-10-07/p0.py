@@ -3,13 +3,10 @@ Dla podanej pary liczb całkowitych funkcja zwraca informację, czy ich iloczyn 
 """
 
 def czy_iloczyn_podzielny_przez_siedem(a: int, b: int) -> bool:
-    if (a * b) % 7 == 0:
-        return True
-    else:
-        return False
+    return (a % 7 == 0) or (b % 7 == 0)
 
 
-if czy_iloczyn_podzielny_przez_siedem(13, 11):
+if czy_iloczyn_podzielny_przez_siedem(13, 77):
     print("Tak")
 else:
     print("Nie")
