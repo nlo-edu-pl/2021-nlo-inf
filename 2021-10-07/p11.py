@@ -13,4 +13,10 @@ assert jakie_bmi(1.8, 70) < 30
 # uwaga, to może być problematyczne:
 assert jakie_bmi(1.8, 70) == 21.604938271604937
 
-# print(jakie_bmi(1.8, 70))
+# lepsza metoda
+epsilon = 0.001
+assert abs(jakie_bmi(1.8, 70) - 21.604938) < epsilon
+
+print("OK")
+
+print(jakie_bmi(1.8, 70))
