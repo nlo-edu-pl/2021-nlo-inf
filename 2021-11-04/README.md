@@ -1,5 +1,7 @@
 # Zadania na dziś
 
+Rozwiązania wysłać na maila nauczyciela do dnia 2021-11-17 godz 23:59.
+
 ## Generator danych
 
 Napisać program, który:
