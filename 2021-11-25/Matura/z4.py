@@ -13,6 +13,18 @@ def suma_kwadratow(n: int) -> int:
         n = n // 10
     return s
 
+def cyfry(n: int):
+    while n > 0:
+        yield n % 10
+        n //= 10
+
+def kwadraty_liczb(liczby: list):
+    for liczba in liczby:
+        yield liczba ** 2
+
+def suma_kwadratow3(n: int) -> int:
+    return sum(kwadraty_liczb(cyfry(n)))
+
 def czy_wesola(n: int) -> bool:
     return cykl_wesolych(n) != False
 
