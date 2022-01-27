@@ -55,3 +55,52 @@ def selection_sort(tablica):
                 pozycja_min = i
         tablica[p], tablica[pozycja_min] = tablica[pozycja_min], tablica[p] # zamiana elementów miejscami
 ```
+
+## Merge sort (przez scalanie)
+
+### Wersja rekurencyjna
+
+```python
+def merge(tablica_a, tablica_b):
+    wynik = []
+    while len(tablica_a) > 0 and len(tablica_b) > 0:
+        if tablica_a[0] > tablica_b[0]:
+            elem = tablica_b.pop(0)
+        else:
+            elem = tablica_a.pop(0)
+        wynik.append(elem)
+    wynik.extend(tablica_a + tablica_b)
+    return wynik
+
+def merge_sort(tablica):
+    dlugosc = len(tablica)
+    if dlugosc <= 1:
+        return tablica
+    a, b = tablica[0:dlugosc//2], tablica[dlugosc//2:]
+    return merge(merge_sort(a), merge_sort(b))
+```
+
+### Wersja bez rekurencji
+
+```python
+def merge(tablica_a, tablica_b):
+    wynik = []
+    while len(tablica_a) > 0 and len(tablica_b) > 0:
+        if tablica_a[0] > tablica_b[0]:
+            elem = tablica_b.pop(0)
+        else:
+            elem = tablica_a.pop(0)
+        wynik.append(elem)
+    wynik.extend(tablica_a + tablica_b)
+    return wynik
+
+def merge_sort(tablica):
+    kolejka = []
+    for element in tablica:
+        kolejka.append([element])
+    while len(kolejka) > 1:
+        a = kolejka.pop(0)
+        b = kolejka.pop(0)
+        kolejka.append(merge(a, b))
+    return kolejka.pop()
+```
