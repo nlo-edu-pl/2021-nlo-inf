@@ -1,6 +1,3 @@
-from pytest import xfail
-
-
 def wizualizuj(tablica):
     "Tekstowa wizualizacja tablicy"
     for x in tablica:
