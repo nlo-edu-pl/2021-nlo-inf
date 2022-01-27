@@ -5,7 +5,7 @@ def wizualizuj(tablica):
     print()
 
 def selection_sort(tablica):
-    "Insertion sort in=place"
+    "Insertion sort in-place"
     for p in range(len(tablica)):
         wizualizuj(tablica)
         print(f'Szukam elementu na pozycję {p}')
