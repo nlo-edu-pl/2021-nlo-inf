@@ -49,4 +49,69 @@ if (t > 0 && t < 100) {
 }
 ```
 
+# Operacje bitowe
+
+## bitowe OR
+
+```
+    1100 0001       193
+    1000 0110       134
+    -------------------
+    1100 0111       199
+```
+
+### Python
+```python
+a = 193
+b = 134
+c = a | b
+
+print(c)    # wynik: 199
+```
+
+## bitowe AND
+```
+    1100 0001       193
+    1000 0110       134
+    -------------------
+    1000 0000       128
+```
+
+### Python
+```python
+a = 193
+b = 134
+c = a & b
+
+print(c)    # wynik: 128
+```
+
+
+## bitowe XOR
+exclusive or, różnica symetryczna
+```
+    1100 0001       193
+    1000 0110       134
+    -------------------
+    0100 0111        71
+```
+
+### Python
+```python
+a = 193
+b = 134
+c = a ^ b
+
+print(c)    # wynik: 71
+```
+
+
+
+
+
+
+
+
+
+
 
