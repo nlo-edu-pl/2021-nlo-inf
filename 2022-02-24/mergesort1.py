@@ -1,6 +1,7 @@
 
 
 def merge(tablica_a: list, tablica_b: list) -> list:
+    print(f"merge {tablica_a} {tablica_b}")
     wynik = []
 
     while True:
@@ -23,9 +24,18 @@ def merge(tablica_a: list, tablica_b: list) -> list:
 
     return wynik
 
-x = merge([1, 2, 3], [2, 2.7, 7])
-print(x)
+def mergesort(tab):
+    """Implementacja rekurencyjna"""
+    print(f"Mergesort {tab}")
+    if len(tab) <= 1:
+        return tab
+    lewa = mergesort(tab[0:len(tab)//2])
+    prawa = mergesort(tab[len(tab)//2:])
+    return merge(lewa, prawa)
 
+liczby = [1, 3, 5, 7, 2, 2, 3, 2, 1, 7, 8]
+
+print(mergesort(liczby))
 
 #assert merge([1], [2]) == [1, 2]
 # assert merge([1, 2, 3], [5, 6, 7]) == [1, 2, 3, 5, 6, 7]
