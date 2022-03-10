@@ -1,6 +1,9 @@
-
+"""
+Przykładowa implementacja mergesort()
+"""
 
 def merge(tablica_a: list, tablica_b: list) -> list:
+    """Funkcja scalająca dwie uporządkowane listy"""
     print(f"merge {tablica_a} {tablica_b}")
     wynik = []
 
