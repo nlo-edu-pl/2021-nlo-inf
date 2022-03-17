@@ -13,5 +13,8 @@ with open(wejscie, 'r') as plik:
                 licznik += 1
         # print(f'{linia = }')
 
+# w tym miejscu zmienna ma pożądaną wartość
+# nie ma returna, bo to nie była funkcja (def)
+
 print(f'{licznik = }')
 

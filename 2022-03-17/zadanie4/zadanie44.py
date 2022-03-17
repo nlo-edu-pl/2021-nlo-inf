@@ -34,3 +34,5 @@ with open(wejscie) as plik:
         #print(f'{linia = }')
 
 print(f'{haslo = }')
+
+
