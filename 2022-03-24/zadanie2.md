@@ -2,28 +2,25 @@
 
 ## schemat blokowy
 ```mermaid
-graph TD
+flowchart TD;
     start(["START"]);
-    cond1{s + k < n};
-    inst1("modyfikuj(s + k, k)")
-    inst2("i = s + 1")
+    cond1{"s + k < n"};
+    inst1["modyfikuj(s + k, k)"];
+    inst2["i = s + 1"];
     cond2{"(i <= n) and (i <= s+k)"};
-    inst3("T[s] += T[i]");
-    inst4("i += 1");
+    inst3["T[s] += T[i]"];
+    inst4["i += 1"];
     theend(["KONIEC"]);
 
     start --> cond1;
 
-    cond1 -- "tak" --> inst1;
+    cond1 -- "tak" --> inst1 --> inst2;
     cond1 -- "nie" --> inst2;
-    inst1 --> inst2;
     inst2 --> cond2;
     
     subgraph loop1 [petla];
-    cond2;
-    cond2 -- "tak" --> inst3;
-    inst3 --> inst4;
-    inst4 --> cond2;
+        cond2;
+        cond2 -- "tak" --> inst3 --> inst4 --> cond2;
     end;
 
     cond2 -- "nie" --> theend;
