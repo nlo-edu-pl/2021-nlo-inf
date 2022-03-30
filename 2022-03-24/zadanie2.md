@@ -3,14 +3,16 @@
 ## schemat blokowy
 ```mermaid
 graph TD
+    start(["START"]);
     cond1{s + k < n};
     inst1("modyfikuj(s + k, k)")
     inst2("i = s + 1")
-
     cond2{"(i <= n) and (i <= s+k)"};
     inst3("T[s] += T[i]");
     inst4("i += 1");
-    END{{koniec}};
+    theend(["KONIEC"]);
+
+    start --> cond1;
 
     cond1 -- "tak" --> inst1;
     cond1 -- "nie" --> inst2;
@@ -24,7 +26,7 @@ graph TD
     inst4 --> cond2;
     end;
 
-    cond2 -- "nie" --> END;
+    cond2 -- "nie" --> theend;
 ```
 
 
