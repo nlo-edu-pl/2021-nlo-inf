@@ -1,9 +1,22 @@
 import zad4
 
-pary = zad4.wczytaj_pary()
-pary.sort()
+liczby = zad4.wczytaj()
 
-print("Wynik:")
-for a, b in pary:
-    print(a, b)
+pary = []
+
+for l in liczby:
+    if l < 10:
+        continue
+    if not zad4.czy_pierwsza(l):
+        continue
+    ws = zad4.wspak(l)
+    if ws < 10:
+        continue
+    if not zad4.czy_pierwsza(ws):
+        continue
+    para = l, ws
+    para2 = ws, l
+    if para not in pary and para2 not in pary:
+        pary.append(para)
+
 print(f'{len(pary) = }')
