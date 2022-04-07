@@ -17,7 +17,7 @@ db.execute("""
 sql = """
     Select
         kp1.klasa,
-        Round(1.0 * kp1.ile / (kp1.ile + kp2.ile), 2) As udzial_m
+        Round(100.0 * kp1.ile / (kp1.ile + kp2.ile), 2) As udzial_m
     From klasa_plec kp1
     Join klasa_plec kp2 On kp1.klasa == kp2.klasa And kp1.plec != kp2.plec
     Where
