@@ -6,7 +6,7 @@ def wczytaj():
     return liczby
 
 def wspak(n):
-    return wspak_int(n)
+    return wspak_str(n)
 
 def wspak_str(n):
     return int(str(n)[::-1])
