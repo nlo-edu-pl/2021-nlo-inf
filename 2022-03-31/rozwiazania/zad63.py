@@ -21,11 +21,11 @@ db.execute("""
     Select
         *,
         Case
-            When ile_ptk*2 > 98 Then 6
-            When ile_ptk*2 > 90 Then 5
-            When ile_ptk*2 > 75 Then 4
-            When ile_ptk*2 > 50 Then 3
-            When ile_ptk*2 > 30 Then 2
+            When ile_ptk*2 >= 98 Then 6
+            When ile_ptk*2 >= 90 Then 5
+            When ile_ptk*2 >= 75 Then 4
+            When ile_ptk*2 >= 50 Then 3
+            When ile_ptk*2 >= 30 Then 2
             Else 1
         End As ocena
     From uczniowie_punkty
