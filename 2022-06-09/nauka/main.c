@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+def CtoF(temp_C: float) -> float:
+    return 1.8 * temp_C + 32
+*/
+
+
+double CtoF(double temp_C) {
+    return 1.8 * temp_C + 32;
+}
+
 int main()
 {
     printf("Hello world!\n");
@@ -28,6 +38,16 @@ int main()
 
     printf("x + y = %.20f\n", x + y);
     printf("x * y = %.20f\n", x * y);
+
+    double t1, t2, t3;
+
+    t1 = 0;
+    t2 = 36.6;
+    t3 = 100;
+
+    printf("t1 = %f F\n", CtoF(t1));
+    printf("t2 = %f F\n", CtoF(t2));
+    printf("t3 = %f F\n", CtoF(t3));
 
     return 0;
 }
