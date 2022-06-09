@@ -18,5 +18,16 @@ int main()
     printf("Iloczyn wynosi: %lld\n", a * b);
     printf("Iloraz wynosi: %lld\n", a / b);
 
+
+    double x, y;
+
+    //x = 0.333333;
+    y = 0.1;
+
+    x = 0.2;
+
+    printf("x + y = %.20f\n", x + y);
+    printf("x * y = %.20f\n", x * y);
+
     return 0;
 }
