@@ -12,6 +12,9 @@ int main()
     b = 40;
 
     printf("Suma wynosi: %d\n", a + b);
+    printf("Roznica wynosi: %d\n", a - b);
+    printf("Iloczyn wynosi: %d\n", a * b);
+    printf("Iloraz wynosi: %d\n", a / b);
 
     return 0;
 }
